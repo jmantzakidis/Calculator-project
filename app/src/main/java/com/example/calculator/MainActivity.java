@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private Button div;
     private Button multi;
     private Button clear;
+    private Button avg;
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -33,121 +34,8 @@ public class MainActivity extends AppCompatActivity {
         div = findViewById(R.id.div);
         multi = findViewById(R.id.multi);
         clear = findViewById(R.id.clear);
-
-        add.setOnClickListener(v -> {
-            if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
-                e1.setError("Dont leave it blank");
-                e2.setError("Dont leave it blank");
-                return;
-            }
-            int num1 = Integer.parseInt(e1.getText().toString());
-            int num2 = Integer.parseInt(e2.getText().toString());
-            int sum = num1 + num2;
-            t1.setText(Double.toString(sum));
-        });
-
-        sub.setOnClickListener(v -> {
-            if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
-                e1.setError("Dont leave it blank");
-                e2.setError("Dont leave it blank");
-                return;
-            }
-            int num1 = Integer.parseInt(e1.getText().toString());
-            int num2 = Integer.parseInt(e2.getText().toString());
-            int sum = num1 - num2;
-            t1.setText(Double.toString(sum));
-        });
-
-        div.setOnClickListener(v -> {
-            if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
-                e1.setError("Dont leave it blank");
-                e2.setError("Dont leave it blank");
-                return;
-            }
-            int num1 = Integer.parseInt(e1.getText().toString());
-            int num2 = Integer.parseInt(e2.getText().toString());
-            int sum = num1 / num2;
-            t1.setText(Double.toString(sum));
-        });
-
-        multi.setOnClickListener(v -> {
-            if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
-                e1.setError("Dont leave it blank");
-                e2.setError("Dont leave it blank");
-                return;
-            }
-            int num1 = Integer.parseInt(e1.getText().toString());
-            int num2 = Integer.parseInt(e2.getText().toString());
-            int sum = num1 * num2;
-            t1.setText(Double.toString(sum));
-        });
-
-        clear.setOnClickListener(v -> {
-            e1.getText().clear();
-            e2.getText().clear();
-            t1.setText("Result");
-        });
+        avg = findViewById(R.id.avg);
 
     }
 }
 
-//    @SuppressLint("SetTextI18n")
-//    public void onButtonClick(View v){
-//
-//        if(TextUtils.isEmpty(e1.getText().toString())||(TextUtils.isEmpty(e2.getText().toString()))) {
-//            e1.setError("Dont leave it blank");
-//            e2.setError("Dont leave it blank");
-//            return;
-//        }
-//        int num1 = Integer.parseInt(e1.getText().toString());
-//        int num2 = Integer.parseInt(e2.getText().toString());
-//        int sum = num1+num2;
-//        t1.setText(Double.toString(sum));
-//    }
-//
-//    @SuppressLint("SetTextI18n")
-//    public void onButtonClick1(View v){
-//        if(TextUtils.isEmpty(e1.getText().toString())||(TextUtils.isEmpty(e2.getText().toString()))) {
-//            e1.setError("Dont leave it blank");
-//            e2.setError("Dont leave it blank");
-//            return;
-//        }
-//        int num1 = Integer.parseInt(e1.getText().toString());
-//        int num2 = Integer.parseInt(e2.getText().toString());
-//        int sum = num1-num2;
-//        if (sum < 0)
-//            t1.setText("The number is negative\nand its " + sum);
-//        else
-//            t1.setText(Double.toString(sum));
-//    }
-//    @SuppressLint("SetTextI18n")
-//    public void onButtonClick2(View v){
-//        if(TextUtils.isEmpty(e1.getText().toString())||(TextUtils.isEmpty(e2.getText().toString()))) {
-//            e1.setError("Dont leave it blank");
-//            e2.setError("Dont leave it blank");
-//            return;
-//        }
-//        int num1 = Integer.parseInt(e1.getText().toString());
-//        int num2 = Integer.parseInt(e2.getText().toString());
-//        int sum = num1 * num2;
-//        t1.setText(Double.toString(sum));
-//    }
-//
-//    @SuppressLint("SetTextI18n")
-//    public void onButtonClick3(View v){
-//        if(TextUtils.isEmpty(e1.getText().toString())||(TextUtils.isEmpty(e2.getText().toString()))) {
-//            e1.setError("Dont leave it blank");
-//            e2.setError("Dont leave it blank");
-//            return;
-//        }
-//        int num1 = Integer.parseInt(e1.getText().toString());
-//        int num2 = Integer.parseInt(e2.getText().toString());
-//        int sum = num1 / num2;
-//        t1.setText(Double.toString(sum));
-//    }
-//    @SuppressLint("SetTextI18n")
-//    public void clearInput(View v){
-//        e1.getText().clear();
-//        e2.getText().clear();
-//        t1.setText("Result");
-//    }
