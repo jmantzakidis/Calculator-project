@@ -49,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
             int sum = num1 - num2;
             t1.setText(Double.toString(sum));
         });
+
+        avg.setOnClickListener(v ->{
+            if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
+                e1.setError("Dont leave it blank");
+                e2.setError("Dont leave it blank");
+                return;
+            }
+            int num1 = Integer.parseInt(e1.getText().toString());
+            int num2 = Integer.parseInt(e2.getText().toString());
+            double sum = (num1 + num2)/2;
+            t1.setText(Double.toString(sum));
+        });
     }
 }
 
