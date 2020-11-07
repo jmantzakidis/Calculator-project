@@ -32,7 +32,18 @@
             motion:layout_constraintHorizontal_bias="0.498"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
-            android:id="@+id/div" />
+            android:id="@+id/div"
+            motion:layout_editor_absoluteX="164dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/avg"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.734"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.111" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
