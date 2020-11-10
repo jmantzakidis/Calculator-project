@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         /**
-         * Add Button set On Click Listener using Lambda Expressions
+         * Div Button set On Click Listener using Lambda Expressions
          *
          * this is the div button  that makes addition of two numbers
          *TextUtils function is checking if both EditTexts have values
