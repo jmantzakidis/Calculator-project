@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Div Button set On Click Listener using Lambda Expressions
          *
-         * this is the div button  that makes addition of two numbers
+         * this is the div button  that makes division  of two numbers
          *TextUtils function is checking if both EditTexts have values
          *
          * @param num1 is the first parameter we give
@@ -121,6 +121,13 @@ public class MainActivity extends AppCompatActivity {
             t1.setText(Double.toString(sum));
         });
 
+        /**
+         * MultiΒutton listener using Lambda Expressions
+         * Precondition: TextUtil requires both EditTexts to have values in order to continue
+         * Postcondition: Returns the errors
+         * @param num1,num2 stores the read values
+         * @param sum stores the result from creating the multiplication of num1 with num2
+         */
         multi.setOnClickListener(v -> {
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
                 e1.setError("Dont leave it blank");
