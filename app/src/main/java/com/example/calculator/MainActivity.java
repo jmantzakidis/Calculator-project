@@ -56,13 +56,24 @@ public class MainActivity extends AppCompatActivity {
                 e2.setError("Dont leave it blank");
                 return;
             }
+
             int num1 = Integer.parseInt(e1.getText().toString());
             int num2 = Integer.parseInt(e2.getText().toString());
             double sum = (num1 + num2)/2;
             t1.setText(Double.toString(sum));
         });
 
+        /**
+         * Add Button set On Click Listener using Lambda Expressions
+         *
+         * this is the add button  that makes addition of two numbers
+         *TextUtils function is checking if both EditTexts have values
+         *
+         * @param num1 is the first parameter we give
+         * @param num2 is the second integer parameter we give
+         * @param sum   is the result that is returned to the TextViiew  place
 
+         */
         add.setOnClickListener(v -> {
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
                 e1.setError("Dont leave it blank");
@@ -74,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
             int sum = num1 + num2;
             t1.setText(Double.toString(sum));
         });
-
 
         div.setOnClickListener(v -> {
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
