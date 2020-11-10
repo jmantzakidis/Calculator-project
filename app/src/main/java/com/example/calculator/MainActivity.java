@@ -56,13 +56,7 @@ public class MainActivity extends AppCompatActivity {
             t1.setText(Double.toString(result));
         });
 
-        /**
-         * AvgΒutton listener using Lambda Expressions
-         * Precondition: TextUtil requires both EditTexts to have values in order to continue
-         * Postcondition: Returns the errors
-         * @param num1,num2 stores the read values
-         * @param sum stores the result from creating the average of num1 and num2
-         */
+
         avg.setOnClickListener(v ->{
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
                 e1.setError("Dont leave it blank");
@@ -132,7 +126,22 @@ public class MainActivity extends AppCompatActivity {
             int sum = num1 * num2;
             t1.setText(Double.toString(sum));
         });
-        //hi
+
+        /**
+         * Clear Button set On Click Listener using Lambda Expressions
+         *
+         * this is the clear button  that clears everything
+         *
+         * @param e1 gets the first number and clears the text field
+         * @param e2 gets the first number and clears the text field
+         * @param t1  result
+
+         */
+        clear.setOnClickListener(v -> {
+            e1.getText().clear();
+            e2.getText().clear();
+            t1.setText("Result");
+        });
     }
 }
 
