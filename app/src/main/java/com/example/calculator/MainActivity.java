@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
          * SubΒutton listener using Lambda Expressions
          * Precondition: TextUtil requires both EditTexts to have values in order to continue
          * Postcondition: Returns the errors
-         * @param num1,num2 stores the two values we give
-         * @param sum gives us the summary from num1,num2
+         * @param num1,num2 stores the read values
+         * @param result stores the result from subtracting num1 from num2
          */
         sub.setOnClickListener(v -> {
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
             }
             int num1 = Integer.parseInt(e1.getText().toString());
             int num2 = Integer.parseInt(e2.getText().toString());
-            int sum = num1 - num2;
-            t1.setText(Double.toString(sum));
+            int result = num1 - num2;
+            t1.setText(Double.toString(result));
         });
 
         avg.setOnClickListener(v ->{
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 e2.setError("Dont leave it blank");
                 return;
             }
-
             int num1 = Integer.parseInt(e1.getText().toString());
             int num2 = Integer.parseInt(e2.getText().toString());
             double sum = (num1 + num2)/2;
