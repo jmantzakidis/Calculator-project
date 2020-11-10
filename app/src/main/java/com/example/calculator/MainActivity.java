@@ -98,6 +98,17 @@ public class MainActivity extends AppCompatActivity {
             t1.setText(Double.toString(sum));
         });
 
+        /**
+         * Add Button set On Click Listener using Lambda Expressions
+         *
+         * this is the div button  that makes addition of two numbers
+         *TextUtils function is checking if both EditTexts have values
+         *
+         * @param num1 is the first parameter we give
+         * @param num2 is the second integer parameter we give
+         * @param sum   is the result that is returned to the TextViiew  place
+
+         */
         div.setOnClickListener(v -> {
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
                 e1.setError("Dont leave it blank");
