@@ -37,7 +37,13 @@ public class MainActivity extends AppCompatActivity {
         clear = findViewById(R.id.clear);
         avg = findViewById(R.id.avg);
 
-
+        /**
+         * SubΒutton listener using Lambda Expressions
+         * Precondition: TextUtil requires both EditTexts to have values in order to continue
+         * Postcondition: Returns the errors
+         * @param num1,num2 stores the two values we give
+         * @param sum gives us the summary from num1,num2
+         */
         sub.setOnClickListener(v -> {
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
                 e1.setError("Dont leave it blank");
