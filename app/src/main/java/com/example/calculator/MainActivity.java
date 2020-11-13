@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         clear = findViewById(R.id.clear);
         avg = findViewById(R.id.avg);
 
+        //test test
+
+
+
         /**
          * SubΒutton listener using Lambda Expressions
          * Precondition: TextUtil requires both EditTexts to have values in order to continue
@@ -84,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
          * @param num1 is the first parameter we give
          * @param num2 is the second integer parameter we give
          * @param sum   is the result that is returned to the TextViiew  place
-
          */
         add.setOnClickListener(v -> {
             if (TextUtils.isEmpty(e1.getText().toString()) || (TextUtils.isEmpty(e2.getText().toString()))) {
@@ -142,13 +145,10 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          * Clear Button set On Click Listener using Lambda Expressions
-         *
          * this is the clear button  that clears everything
-         *
          * @param e1 gets the first number and clears the text field
          * @param e2 gets the first number and clears the text field
          * @param t1  result
-
          */
         clear.setOnClickListener(v -> {
             e1.getText().clear();
