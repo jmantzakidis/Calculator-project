@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         clear = findViewById(R.id.clear);
         avg = findViewById(R.id.avg);
 
-        //test test
+
 
 
 
