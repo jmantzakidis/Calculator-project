@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         avg = findViewById(R.id.avg);
 
         //test markou branch
+        //test
 
 
 
